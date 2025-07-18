@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Personal</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/modal.css" />
+  <link rel="stylesheet" href="style/detail-view.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <style>
+    .detail-view-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background-color: #fafafa;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    #detail-view-title {
+      flex-grow: 1;
+      margin: 0 20px;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .detail-view-header .icono {
+      padding: 8px;
+      border-radius: 50%;
+      transition: background-color 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    .detail-view-header .icono:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="add-collection-btn" class="icono" title="Añadir Colección"><span class="material-icons">add</span></div>
+    <div class="icono" title="Añadir archivo"><span class="material-icons">upload</span></div>
+    <div class="icono" title="Exportar Portafolio"><span class="material-icons">download</span></div>
+    <div class="icono" title="Ajustes"><span class="material-icons">settings</span></div>
+  </header>
+
+  <main>
+    <section class="galeria">
+      <div class="item">
+        <div class="item-content">
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/280x400/6D829B/fff?text=Imagen+1" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/280x350/5E748B/fff?text=Imagen+2" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/280x450/4F627A/fff?text=Imagen+3" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x500/405169/fff?text=Imagen+4" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x380/314058/fff?text=Imagen+5" alt="Imagen del álbum" />
+          </div>
+        </div>
+        <div class="item-info">
+            <h3>Viaje a la Costa</h3>
+        </div>
+        <div class="acciones">
+            <span class="material-icons move-handle" title="Mover">open_with</span>
+            <span class="material-icons edit-btn" title="Renombrar">edit</span>
+            <div class="color-picker-wrapper">
+                <span class="material-icons">palette</span>
+                <input type="color" class="color-input" value="#000000">
+            </div>
+            <span class="material-icons delete-btn" title="Eliminar">delete</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-content">
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x300/A4B4C4/fff?text=Foto+A" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x500/93A3B3/fff?text=Foto+B" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x400/8292A2/fff?text=Foto+C" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x440/718191/fff?text=Foto+D" alt="Imagen del álbum" />
+          </div>
+        </div>
+        <div class="item-info">
+            <h3>Retratos en B&N</h3>
+        </div>
+        <div class="acciones">
+            <span class="material-icons move-handle" title="Mover">open_with</span>
+            <span class="material-icons edit-btn" title="Renombrar">edit</span>
+            <div class="color-picker-wrapper">
+                <span class="material-icons" title="Cambiar color">palette</span>
+                <input type="color" class="color-input" value="#000000">
+            </div>
+            <span class="material-icons delete-btn" title="Eliminar">delete</span>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-content">
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x420/F1A661/fff?text=Luz+1" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x380/E09550/fff?text=Luz+2" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x480/D0843F/fff?text=Luz+3" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x350/C0732E/fff?text=Luz+4" alt="Imagen del álbum" />
+          </div>
+          <div class="detail-item">
+            <span class="material-icons detail-item-handle">open_with</span>
+            <span class="material-icons detail-item-download" title="Descargar">download</span>
+            <img src="https://via.placeholder.com/340x520/B0621D/fff?text=Luz+5" alt="Imagen del álbum" />
+          </div>
+        </div>
+        <div class="item-info">
+            <h3>Atardeceres</h3>
+        </div>
+        <div class="acciones">
+            <span class="material-icons move-handle" title="Mover">open_with</span>
+            <span class="material-icons edit-btn" title="Renombrar">edit</span>
+            <div class="color-picker-wrapper">
+                <span class="material-icons" title="Cambiar color">palette</span>
+                <input type="color" class="color-input" value="#000000">
+            </div>
+            <span class="material-icons delete-btn" title="Eliminar">delete</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="edit-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+      <h2>Editar Colección</h2>
+      <label for="album-name-input">Nombre de la colección</label>
+      <input type="text" id="album-name-input" placeholder="Escribe el nuevo nombre...">
+      <div class="modal-actions">
+        <button id="cancel-btn">Cancelar</button>
+        <button id="save-btn">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="detail-view" class="detail-view">
+    <header class="detail-view-header">
+      <div id="detail-view-back-btn" class="icono back-btn" title="Volver">
+        <span class="material-icons">arrow_back</span>
+      </div>
+      <h2 id="detail-view-title"></h2>
+      <div class="detail-view-actions">
+        <div id="detail-view-upload-btn" class="icono" title="Subir Archivo">
+          <span class="material-icons">upload_file</span>
+        </div>
+      </div>
+    </header>
+    <div id="detail-view-content" class="detail-view-content">
+    </div>
+    <input type="file" id="file-upload-input" multiple style="display: none;" accept="image/*,text/plain,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx">
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/color-picker.js"></script>
+</body>
+</html>
